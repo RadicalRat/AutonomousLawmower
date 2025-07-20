@@ -5,7 +5,7 @@
 #define STEER_PIN 5
 
 #include "commands.h"
-#include "motor_commands.hpp"
+#include "motor_commands.h"
 #include <Servo.h>
 #include "servo.h"
 
@@ -64,7 +64,7 @@ void runCommand() {
 
 void setup() {
   Serial.begin(BAUDRATE);
-
+  motor_init(MOTOR_PIN);
   resetCommand();
 
   steer.initServo(
